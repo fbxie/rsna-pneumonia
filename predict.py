@@ -58,8 +58,8 @@ test_outputs = []
 start = time.time()
 
 for i, fname in enumerate(os.listdir(test_jpg_dir)):
-    # print(f"Predicting boxes for image # {i+1}\r", end="")
-    print("Predicting boxes for image # ",i+1)
+    print(f"Predicting boxes for image # {i+1}\r", end="")
+    # print("Predicting boxes for image # ",i+1)
     fpath = os.path.join(test_jpg_dir, fname)
     fid = fname[:-4]
 
@@ -95,8 +95,8 @@ for i, fname in enumerate(os.listdir(test_jpg_dir)):
 print()
 end = time.time()
 # print execution time
-# print(f"Elapsed time = {end-start:.3f} seconds")
-print("Elapsed time = "+{end-start}+" seconds")
+print(f"Elapsed time = {end-start:.3f} seconds")
+# print("Elapsed time = "+{end-start}+" seconds")
 
 test_df = pd.DataFrame({'patientId': test_ids, 'PredictionString': test_outputs},
                        columns=['patientId', 'PredictionString'])
